@@ -7,8 +7,9 @@ while True:
     except ValueError:print("Please enter a number")
 
 bullEyeWin = GraphWin("Bulls Eye", windowSize,windowSize);bullEyeWin.setCoords(0,0, windowSize,windowSize)
-r = random.randint(5,50)
+r = random.randint(5,20)
 
 for i in range(r):
-    bullsEyeCircle = Circle(Point(windowSize/2,windowSize/2),50 * i)
+    bullsEyeCircle = Circle(Point(windowSize/2,windowSize/2),((windowSize/3)/r) * i)
+
     bullsEyeCircle.draw(bullEyeWin)
